@@ -23,7 +23,7 @@
     </head>
 
     <body class="home page-template-default page page-id-12613 theme-dtt gdlr-core-body woocommerce-no-js dtt-body dtt-body-front dtt-full dtt-with-sticky-navigation dtt-blockquote-style-3 gdlr-core-link-to-lightbox"
-        data-home-url="index.html" >
+        data-home-url="{% url 'page:home' %}" >
 
         <div class="dtt-mobile-header-wrap">
             <div class="dtt-mobile-header dtt-header-background dtt-style-slide dtt-sticky-mobile-navigation" id="dtt-mobile-header">
@@ -31,10 +31,10 @@
                     <div class="dtt-logo dtt-item-pdlr">
                         <div class="dtt-logo-inner">
                             <a class="dtt-fixed-nav-logo" href="{% url 'page:home' %}">
-                                <img src="{% static 'images/logo.svg' %}"alt="" width="123"height="31"title="ddt logo"/>
+                                <img src="{% static 'images/logo.svg' %}"alt="" width="240"height="50"title="ddt logo"/>
                             </a>
                             <a class="dtt-orig-logo" href="{% url 'page:home' %}">
-                                <img src="{% static 'images/logo.svg' %}"alt=""width="123"height="31"title="ddt logo"/>
+                                <img src="{% static 'images/logo.svg' %}"alt=""width="240"height="50"title="ddt logo"/>
                             </a>
                         </div>
                     </div>
@@ -96,10 +96,10 @@
                                 <div class="dtt-logo dtt-item-pdlr">
                                     <div class="dtt-logo-inner">
                                         <a class="dtt-fixed-nav-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" width="180px"height="auto" title="ddt logo"/>
+                                            <img src="{% static 'images/logo.svg' %}"alt="" width="240px"height="auto" title="ddt logo"/>
                                         </a>
                                         <a class="dtt-orig-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" width="180px"height="auto" title="ddt logo"/>
+                                            <img src="{% static 'images/logo.svg' %}"alt="" width="240px"height="auto" title="ddt logo"/>
                                         </a>
                                     </div>
                                 </div>
@@ -123,9 +123,6 @@
                                         </ul>
                                     </li>
                                     
-                                    <li class="menu-item dtt-normal-menu">
-                                        <a href="{% url 'page:about' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Pubications and Updates</span>Newsroom</a>
-                                    </li>
                                     <li class="menu-item dtt-normal-menu">
                                         <a href="{% url 'page:contact' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Reach Out</span>Contact</a>
                                     </li>

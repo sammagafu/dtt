@@ -1,0 +1,24 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contents %}
+<section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-5"><img class="bg-img-cover bg-center" src="{% static 'assets/images/login/3.jpg' %}" alt="looginpage"></div>
+          <div class="col-xl-7 p-0">    
+            <div class="login-card">
+              <form class="theme-form login-form" action="" method="POST">
+              {% csrf_token %}
+                <h4>Login</h4>
+                <h6>Welcome back! Log in to your account.</h6>
+                {{form|crispy}}
+                <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Login">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock contents %}
