@@ -57,3 +57,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+    def get_full_name(self):
+        return "{} {}".format(self.first_name,self.last_name)

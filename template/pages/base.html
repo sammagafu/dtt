@@ -11,12 +11,14 @@
         <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/elegant/elegant-font.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/ionicons/ionicons.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/simpleline/simpleline.css' %}" type="text/css" media="all" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/style.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/include/css/page-builder.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'js/plugins/revslider/public/assets/css/rs6.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'css/style-core.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'css/dtt-style.css' %}" type="text/css" media="all" />
         <link rel="stylesheet" href="{% static 'js/plugins/revslider/public/assets/fonts/font-awesome/css/font-awesome.css' %}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{% static 'css/overide.css' %}">
         {% comment %} favicon {% endcomment %}
         <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}">
 
@@ -96,10 +98,10 @@
                                 <div class="dtt-logo dtt-item-pdlr">
                                     <div class="dtt-logo-inner">
                                         <a class="dtt-fixed-nav-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" width="240px"height="auto" title="ddt logo"/>
+                                            <img src="{% static 'images/logo.svg' %}"alt="" title="ddt logo"/>
                                         </a>
                                         <a class="dtt-orig-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" width="240px"height="auto" title="ddt logo"/>
+                                            <img src="{% static 'images/logo.svg' %}"alt="" title="ddt logo"/>
                                         </a>
                                     </div>
                                 </div>
@@ -110,27 +112,22 @@
                                         <a href="{% url 'page:home' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">start</span>Home</a>
                                     </li>
                                     <li class="menu-item menu-item-has-children dtt-normal-menu">
-                                        <a href="{% url 'page:about' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">what we do</span>Services</a>
-                                        <ul class="sub-menu">
+                                        <a href="{% url 'page:about' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Why & How</span>What we do</a>
+                                        {% comment %} <ul class="sub-menu">
                                             <li class="menu-item"><a href="{% url 'page:academy' %}">DTT Academy</a></li>
                                             <li class="menu-item"><a href="{% url 'page:portfolio' %}">Portfolio management</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children dtt-normal-menu">
-                                        <a href="{% url 'page:about' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Know us</span>About Us</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="{% url 'page:people' %}">Our People</a></li>
-                                        </ul>
+                                        </ul> {% endcomment %}
                                     </li>
                                     
+                                    
                                     <li class="menu-item dtt-normal-menu">
-                                        <a href="{% url 'page:contact' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Reach Out</span>Contact</a>
+                                        <a href="{% url 'page:contact' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">what next</span>Reach Out</a>
                                     </li>
                                     </ul>
                                         <div class="dtt-navigation-slide-bar dtt-navigation-slide-bar-style-dot" data-size-offset="0" id="dtt-navigation-slide-bar"></div>
                                     </div>
                                     <div class="dtt-main-menu-right-wrap clearfix">
-                                        <a class="dtt-main-menu-right-button dtt-button-1 dtt-style-round" href="contact.html" target="_self">Client Portal</a>
+                                        <a class="dtt-main-menu-right-button dtt-button-1 dtt-style-round" href="{% url 'login' %}" target="_self">Client Portal</a>
                                     </div>
                                 </div>
                                 <!-- dtt-navigation -->
@@ -233,6 +230,7 @@
 
 
         <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script type="text/javascript" src="{% static 'js/jquery-migrate.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/plugins/revslider/public/assets/js/rbtools.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/plugins/revslider/public/assets/js/rs6.min.js' %}"></script>

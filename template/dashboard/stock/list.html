@@ -1,0 +1,102 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block contents %}
+<!-- Loader ends-->
+<!-- page-wrapper Start-->
+<div class="page-wrapper" id="pageWrapper">
+  <!-- Page Header Start-->
+  <div class="page-main-header">
+    <div class="main-header-right row m-0">
+      <div class="main-header-left">
+        <div class="logo-wrapper"><a href="{% url 'dashboard:index' %}"><img class="img-fluid"
+              src="{% static 'images/logo-dark.svg' %}" alt=""></a></div>
+        <div class="dark-logo-wrapper"><a href="index.html"><img class="img-fluid" src="{% static 'images/logo.svg' %}"
+              alt=""></a></div>
+        <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i>
+        </div>
+      </div>
+
+      {% include "includes/header.html" %}
+      <div class="d-lg-none mobile-toggle pull-right w-auto"><i data-feather="more-horizontal"></i></div>
+    </div>
+  </div>
+  <!-- Page Header Ends                              -->
+  <!-- Page Body Start-->
+  <div class="page-body-wrapper horizontal-menu">
+    <!-- Page Sidebar Start-->
+    {% include 'includes/sidebar.html' %}
+    <!-- Page Sidebar Ends-->
+    <div class="page-body">
+      <div class="container-fluid">
+        <div class="page-header">
+        {% comment %} row starts here {% endcomment %}
+          <div class="row">
+          <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Currency Performance</h5><span>Recently Data</span>
+                  </div>
+                  <div class="card-block row">
+                    <div class="col-sm-12 col-lg-12 col-xl-12">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class="bg-primary">
+                            <tr>
+                              <th scope="col">Date</th>
+                              <th scope="col">Traders Name</th>
+                              <th scope="col">Pairs</th>
+                              <th scope="col">Lots traded</th>
+                              <th scope="col">Profit & Loss</th>
+                              <th scope="col">Pips Traded</th>
+                              <th scope="col">Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for currency in stock %}
+                            <tr>
+                              
+                               <th>{{ currency.traded_date }}</th>
+                               <th>{{ currency.trader.trader.get_full_name }}</th>
+                               <th>{{ currency.pair }}</th>
+                               <th>{{ currency.lots_traded |intcomma}}</th>
+                               <th>{% if currency.proit_n_loss < 0%}
+                               <p class="text-danger">{{ currency.proit_n_loss|intcomma}}</p>
+                               {% else %}
+                               <p class="text-primary">{{ currency.proit_n_loss|intcomma}}</p>
+                               {% endif %}</th>
+                               <th>{{ currency.pips |intcomma}}</th>
+                               <th><a href="">view <i class="fas fa-angle-double-right"></i></a></th>
+                              
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          {% comment %} row ends here {% endcomment %}
+        </div>
+      </div>
+      <!-- Container-fluid starts-->
+    </div>
+    <!-- footer start-->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 footer-copyright">
+            <p class="mb-0">Copyright {% now "Y" %} © DTT All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="pull-right mb-0">Hand crafted & made with <i class="fa fa-heart font-secondary"></i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+{% endblock contents %}

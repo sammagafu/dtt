@@ -1,3 +1,134 @@
 .gotham-font{
     font-family: GothamPro;;
 }
+.mr-30{
+    margin-right: 30px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+.dtt-orig-logo .dtt-fixed-nav-logo{
+    width: 340px !important;
+    height: auto;
+}
+.intro{
+    margin-top: 0 !important;
+}
+.welcome-message{
+    background-position: cover;
+    min-height: 850px;
+    padding:70px 0 70px 0;
+    background-image: url('../images/slider/slider-3-bg.jpg');
+}
+
+.welcome-message .intro-message{
+    padding:300px 30px;
+}
+
+.intro-message h1{
+    color: #d32525;
+}
+.intro-message,p{
+    font-size: 1.2em;
+    font-weight: 200;
+    color:#fff;
+}
+
+.about-dtt .content{
+    margin-left: 85px;
+    margin-right: 250px;
+}
+.about-dtt .content span {
+    color: #d32525;
+}
+.about-dtt .content p{
+    padding-right: 80px;
+    font-size: 1.6em;
+    font-weight: 100;
+    color: #000;
+}
+.dtt-page-title{
+    padding-top: 40px;
+}
+.dtt-page-title h6{
+    margin: 10 0;
+    font-size: 0.7em;
+    font-weight: 100;
+    color: #000;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+h1.dtt-title{
+    font-weight: 200;
+}
+
+h1.dtt-title span{
+    color: #d32525;
+}
+.dtt-text{
+    font-size: 1.6em;
+    font-weight: 100;
+    color: #000;
+}
+
+section{
+    padding: 100px 0 100px 0;
+}
+
+.values-dtt{
+    color: #000;
+}
+
+.values-dtt .mr-30{
+    margin-right: 30px;
+}
+
+.values-dtt .content{
+    padding-left: 80px;
+}
+.values-dtt .content p{
+    padding-right: 30px;
+    color: #000;
+}
+
+.cta{
+    background-position: cover;
+    min-height: 650px;
+    background-image: url('../images/slider/slider-1-bg.jpg');
+}
+.banner{
+    padding: 100px 0;
+}
+.banner .banner__title{
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.banner .banner__inner .banner__text{
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 1.2px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+a.banner__subtext{
+    letter-spacing: .6px;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    text-decoration: none;
+    border-bottom: 1px solid #a9000b;
+    transition: .2s ease-in-out;
+}
+.solution{
+    background-color:rgb(241, 238, 238);
+}
+
+.pb-45{
+    padding-bottom: 45px;
+}
+
+.pb-145{
+    padding-bottom: 145px;
+}

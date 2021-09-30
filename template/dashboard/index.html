@@ -1,6 +1,8 @@
 {% extends 'dashboard/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load humanize %}
+
 {% block contents %}
 <!-- Loader ends-->
 <!-- page-wrapper Start-->
@@ -30,9 +32,9 @@
     <div class="page-body">
       <div class="container-fluid">
         <div class="page-header">
-        {% comment %} row starts here {% endcomment %}
+          {% comment %} row starts here {% endcomment %}
           <div class="row">
-          {% comment %} item {% endcomment %}
+            {% comment %} item {% endcomment %}
             <div class="col-sm-6 col-xl-4 col-lg-4">
               <div class="card o-hidden border-0">
                 <div class="bg-primary b-r-4 card-body">
@@ -45,9 +47,10 @@
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                       </svg></div>
                     <div class="media-body"><span class="m-0">Capital Injected</span>
-                      <h4 class="mb-0 counter">6659</h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-database icon-bg">
+                      <h4 class="mb-0 counter"> $ {{ starting_balance.startingbalance__sum.normalize|intcomma }}</h4>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-database icon-bg">
                         <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                         <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -71,9 +74,9 @@
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                       </svg></div>
                     <div class="media-body"><span class="m-0">Asset Allocation</span>
-                      <h4 class="mb-0 counter">6659</h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-database icon-bg">
+                      <h4 class="mb-0 counter">{{ assets_allocation }}</h4><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-database icon-bg">
                         <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                         <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -97,9 +100,9 @@
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                       </svg></div>
                     <div class="media-body"><span class="m-0">Current Account Balance</span>
-                      <h4 class="mb-0 counter">$ 661259</h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-database icon-bg">
+                      <h4 class="mb-0 counter">$ 661259</h4><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-database icon-bg">
                         <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                         <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -111,8 +114,26 @@
             </div>
             {% comment %} end item {% endcomment %}
           </div>
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 box-col-12">
+              <div class="card">
+                <div class="card-header pb-0">
+                  <h5>Portfolio Growth</h5>
+                </div>
+                <div class="card-body chart-block">
+                  <div class="">
+                    <div class="flot-chart-placeholder">
+                      <canvas id="portifolio"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           {% comment %} row ends here {% endcomment %}
         </div>
+
+
       </div>
       <!-- Container-fluid starts-->
     </div>
@@ -131,4 +152,73 @@
     </footer>
   </div>
 </div>
+
 {% endblock %}
+
+{% block script %}
+<script>
+  var endpoint = '/dashboard/data-line/currency/'
+  var defaultData = []
+  var labels = []
+  $.ajax({
+        method: 'GET',
+        url: endpoint,
+        success: function (data) {
+          labels = data.labels
+          defaultData = data.data
+
+          var ctx = document.getElementById('portifolio').getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: labels,
+                datasets: [{
+                  label: 'Portfolio',
+                  data: defaultData,
+                }]
+              }
+            })
+            },
+            error: function (data) {
+              console.log("error")
+              console.log(error_data)
+            },
+          });
+
+        // var ctx = document.getElementById('portifolio').getContext('2d');
+        // var myChart = new Chart(ctx, {
+        //     type: 'line',
+        //     data: {
+        //         labels: labels,
+        //         datasets: [{
+        //             label: 'Portfolio',
+        //             data: defaultData,
+        //             backgroundColor: [
+        //                 'rgba(255, 99, 132, 0.2)',
+        //                 'rgba(54, 162, 235, 0.2)',
+        //                 'rgba(255, 206, 86, 0.2)',
+        //                 'rgba(75, 192, 192, 0.2)',
+        //                 'rgba(153, 102, 255, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)'
+        //             ],
+        //             borderColor: [
+        //                 'rgba(255, 99, 132, 1)',
+        //                 'rgba(54, 162, 235, 1)',
+        //                 'rgba(255, 206, 86, 1)',
+        //                 'rgba(75, 192, 192, 1)',
+        //                 'rgba(153, 102, 255, 1)',
+        //                 'rgba(255, 159, 64, 1)'
+        //             ],
+        //             borderWidth: 1
+        //         }]
+        //     },
+        //     options: {
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true
+        //             }
+        //         }
+        //     }
+        // });
+</script>
+{% endblock script %}
