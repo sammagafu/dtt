@@ -35,15 +35,14 @@
 }
 
 .about-dtt .content{
-    margin-left: 85px;
-    margin-right: 250px;
+    padding-left: 2em;
+    font-size: 1.2em;
 }
+
 .about-dtt .content span {
     color: #d32525;
 }
 .about-dtt .content p{
-    padding-right: 80px;
-    font-size: 1.6em;
     font-weight: 100;
     color: #000;
 }
@@ -72,22 +71,20 @@ h1.dtt-title span{
 }
 
 section{
-    padding: 100px 0 100px 0;
+    padding: 80px 0;
 }
 
 .values-dtt{
     color: #000;
 }
 
-.values-dtt .mr-30{
-    margin-right: 30px;
-}
-
 .values-dtt .content{
-    padding-left: 80px;
+    padding-left: 2em;
+}
+.values-dtt .content span {
+    color: #d32525;
 }
 .values-dtt .content p{
-    padding-right: 30px;
     color: #000;
 }
 
