@@ -129,3 +129,7 @@ a.banner__subtext{
 .pb-145{
     padding-bottom: 145px;
 }
+
+.dtt-p {
+    font-size: 23px; font-weight: 200; letter-spacing: 0px; text-transform: none; color: rgb(31, 30, 30);
+}
