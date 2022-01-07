@@ -2,194 +2,111 @@
 {% load static %}
 
 {% block content %}
-<div class="dtt-page-title-wrap dtt-style-custom dtt-left-align">
-    <div class="dtt-header-transparent-substitute"></div>
-    <div class="dtt-page-title-overlay"></div>
-    <div class="dtt-page-title-container dtt-container">
-        <div class="dtt-page-title-content dtt-item-pdlr">
-            <div class="dtt-page-caption">Service</div>
-            <h1 class="dtt-page-title">DTT Academy</h1>
-            <div class="dtt-page-caption-divider"></div>
-        </div>
-    </div>
-</div>
-{% comment %} the rest {% endcomment %}
-<div class="dtt-page-wrapper" id="dtt-page-wrapper">
-   <div class="gdlr-core-page-builder-body">
-      <div class="gdlr-core-pbf-wrapper" style="padding: 80px 0px 30px 0px;" id="gdlr-core-wrapper-1">
-         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-               <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" data-skin="Service Skin" id="gdlr-core-column-58332">
-                  <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
-                     <div class="gdlr-core-pbf-background-wrap"></div>
-                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                              <div class="gdlr-core-title-item-title-wrap">
-                                 <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 28px; font-weight: 600; letter-spacing: 0px; text-transform: none; color: #d32525;">
-                                    Our Services<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
-                                 </h3>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-custom-menu-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-style-2" style="padding-bottom: 15px; font-size: 19px;">
-                              <ul id="menu-services" class="menu">
-                                 <li class="menu-item"><a href="{% url 'page:academy' %}">DTT Academy</a></li>
-                                 <li class="menu-item"><a href="{% url 'page:portfolio' %}">Portfolio Management</a></li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-left-align" style="margin-bottom: 45px;">
-                              <div class="gdlr-core-divider-container" style="max-width: 80px;">
-                                 <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #d32525; border-width: 2px;"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                              <a
-                                 class="gdlr-core-button gdlr-core-button-gradient gdlr-core-left-align gdlr-core-button-no-border gdlr-core-button-full-width"
-                                 href="#"
-                                 style="
-                                 font-size: 16px;
-                                 font-weight: 500;
-                                 letter-spacing: 0px;
-                                 color: #d32525;
-                                 padding: 15px 35px 15px 35px;
-                                 text-transform: none;
-                                 border-radius: 1px;
-                                 -moz-border-radius: 1px;
-                                 -webkit-border-radius: 1px;
-                                 background: #f5f5f5;
-                                 "
-                                 >
-                              <i class="gdlr-core-pos-left fa fa-file-pdf-o" style="font-size: 16px; color: #d32525;"></i><span class="gdlr-core-content">Company Profile</span>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="gdlr-core-pbf-column gdlr-core-column-45" id="gdlr-core-column-98149">
-                  <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="padding: 10px 0px 0px 20px;">
-                     <div class="gdlr-core-pbf-background-wrap"></div>
-                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                              <div class="gdlr-core-title-item-title-wrap">
-                                 <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 44px; font-weight: 500; letter-spacing: 0px; text-transform: none; color: #353535;">
-                                   Introduction to Financial markets <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
-                                 </h3>
-                              </div>
-                           </div>
-                        </div>
+<section class="trusted-area breadcrumb-area text-center">
+   <div class="trusted-fluid">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <div class="trusted-content">
+                       <div class="trusted__title">
+                           <ul class="bread__rumb-item">
+                               <li class="active-item"><a href="{% url 'page:home' %}">home</a></li>
+                               <li>services</li>
+                           </ul>
+                           <h2 class="trusted__title-title">DTT Academy</h2>
+                       </div><!-- end trusted__title -->
+                   </div><!-- end trusted-content -->
+               </div><!-- end col-md-12 -->
+           </div><!-- end row -->
+       </div><!-- container -->
+   </div><!-- end trusted-fluid -->
+</section>
 
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 40px;">
-                              <div class="gdlr-core-text-box-item-content">
-                                 <p class="dtt-p">With interactive classroom sessions and digital learning formats of high practical relevance, DTT Academy provides first-hand financial market know-how. Focused on trading, clearing and settlement, our training courses and study programmes are aligned with DTT products and services. Further financial topics, such as the functioning of capital markets, investment products, portfolio management and new technologies like blockchain, complement the offering.</p>
-                              </div>
-                           </div>
-                        </div>
+<section class="single-area responsive-content area-padding">
+   <div class="service-fluid">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-8">
+                   <div class="single-content single--content">
+                       <div class="avivon-heading">
+                           <h2 class="avivon__title">Introduction to Financial markets</h2>
+                           <p class="avivon__desc audit-title mt-30px mb-40px">With interactive classroom sessions and digital learning formats of high practical relevance, DTT Academy provides first-hand financial market know-how. Focused on trading, clearing and settlement, our training courses and study programmes are aligned with DTT products and services. Further financial topics, such as the functioning of capital markets, investment products, portfolio management and new technologies like blockchain, complement the offering.
+                           </p>
+                       </div><!-- end avivon-heading -->
+                   </div><!-- end single-content -->
 
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 40px;">
-                              <div class="gdlr-core-text-box-item-content">
-                              <h6>Our asset classes</h6>
-                                 <ul>
-                                    <li>Currencies</li>
-                                    <li>Futures</li>
-                                    <li>Crypto currencies</li>
-                                    <li>Indices</li>
-                                    <li>Commodities</li>
-                                    <li>Equities</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
+                   <div class="single__img clearfix mt-30px avivon-single">
+                     <div class="avivon-heading single__service">
+                         <h3>Our asset classes</h3>
+                         <ul class="plan__list mt-25px">
+                             <li><i class="fas fa-check-circle"></i> Currencies</li>
+                             <li><i class="fas fa-check-circle"></i> Futures</li>
+                             <li><i class="fas fa-check-circle"></i> Crypto currencies</li>
+                             <li><i class="fas fa-check-circle"></i> Indices</li>
+                             <li><i class="fas fa-check-circle"></i> Commodities</li>
+                             <li><i class="fas fa-check-circle"></i> Equities</li>
+                         </ul>
+                     </div><!-- end avivon-heading -->
+                 </div>
 
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 40px;">
-                              <div class="gdlr-core-text-box-item-content">
-                              <h3>Training program outline</h3>
-                              <ol>
-                                 <li>Recorded course 
-                                    <ul>
-                                       <li>More than 20 hours with practical knowledge</li>
-                                       <li>Clarity</li>
-                                       <li>Descriptive</li>
-                                       <li>Quiz at the end of each lesson</li>
-                                    </ul>
-                                 </li>
-                                 <li>
-                                    Strategy formulation
-                                    <ul>
-                                       <li>1 week on to one coaching of strategy formulation</li>
-                                       <li>Private interaction with our Top pro trader</li>
-                                    </ul>
-                                 </li>
-                                 <li>Included trading tools 
-                                    <ul>
-                                       <li>Proprietary excel spreadsheet (journal)</li>
-                                       <li>Customized trading templates (trading edge)</li>
-                                       <li>Funding program (for solicited candidates)</li>
-                                    </ul>
-                                 </li>
-                                 <li>Earn your certificate for completion</li>
-                              </ol>
-                              
-                              </div>
-                           </div>
-                        </div>
+                 <div class="single__img clearfix mt-30px avivon-single">
+                  <div class="avivon-heading single__service">
+                      <h6 class="avivon__title">Training program outline</h6>
+                      <ol>
+                         <li>Recorded course
+                           <ul class="plan__list mt-25px">
+                              <li><i class="fas fa-check-circle"></i> More than 20 hours with practical knowledge
+                              </li>
+                              <li><i class="fas fa-check-circle"></i> Clarity</li>
+                              <li><i class="fas fa-check-circle"></i> Descriptive</li>
+                              <li><i class="fas fa-check-circle"></i> Quiz at the end of each lesson</li>
+                          </ul>
+                         </li>
+                         <li>Strategy formulation
+                           <ul class="plan__list mt-25px">
+                              <li><i class="fas fa-check-circle"></i> 1 week on to one coaching of strategy formulation</li>
+                              <li><i class="fas fa-check-circle"></i> Private interaction with our Top pro trader</li>
+                          </ul>
+                         </li>
 
-                        <div class="gdlr-core-pbf-element">
-                           <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 40px;">
-                              <div class="gdlr-core-text-box-item-content">
-                              <h3>Professional Training program</h3>
-                              <ol>
-                                 <li>One-on-one mentoring
-                                    <ul>
-                                       <li>60-minute one-on-one mentoring sessions thrice a week, for 12 weeks</li>
-                                       <li>Focused</li>
-                                       <li>Individualized</li>
-                                       <li>Attentive</li>
-                                       <li>Specific</li>
-                                       <li>One-on-one session recordings become your unique resource library
-                                       </li>
-                                    </ul>
-                                 </li>
-                                 <li>
-                                    Live sessions
-                                    <ul>
-                                       <li>2 weeks membership to the trading live sessions.</li>
-                                       <li>Seeing is understanding.</li>
-                                       <li>Guidance from a career trader is the easiest way you navigate changing market conditions. </li>
-                                       <li>Build a playbook of set plays to trade all market conditions, laying the foundation of your trading business for years to come.</li>
-                                    </ul>
-                                 </li>
-                                 <li>Included trading tools 
-                                    <ul>
-                                       <li>Ninja Trader 7 & 8 Order Flow softwares with lifetime licenses</li>
-                                       <li>Proprietary workspace and templates and unfiltered historical bid, ask and traded price tick data </li>
-                                       <li>If required: appropriate trading station including 2 or 3 monitors, delivered configured and ready-to-go!</li>
-                                    </ul>
-                                 </li>
-                                 <li>Earn your certificate for completion</li>
-                              </ol>
-                              
-                              </div>
-                           </div>
-                        </div>
+                         <li>Included trading tools
+                           <ul class="plan__list mt-25px">
+                              <li><i class="fas fa-check-circle"></i> Proprietary excel spreadsheet (journal)</li>
+                              <li><i class="fas fa-check-circle"></i> Customized trading templates (trading edge)</li>
+                              <li><i class="fas fa-check-circle"></i> Funding program (for solicited candidates)</li>
+                          </ul>
+                         </li>
+                         <li>Earn your certificate for completion</li>
+                      </ol>
+                      
+                  </div><!-- end avivon-heading -->
+              </div>
 
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-{% comment %} end {% endcomment %}
+               </div><!-- end col-md-8 -->
+               <div class="col-md-4">
+                   <div class="side-bar">
+                       <div class="side__shared mb-30px">
+                           <h3 class="side__bar-title">Services</h3>
+                           <ul class="side__bar-links">
+                               <li>
+                                   <a href="{% url 'page:academy' %}">DTT Academny</a>
+                                   <span class="fontello icon-angle-double-right"></span>
+                               </li>
+                                <li>
+                                   <a href="{% url 'page:portfolio' %}">Portfolio Management</a>
+                                    <span class="fontello icon-angle-double-right"></span>
+                               </li>
+                           </ul>
+                       </div><!-- end side__shared -->
+                       <div class="download__btn">
+                           <a href="#" class="download__btn-btn">
+                               Company brochure <span class="fontello icon-angle-double-right"></span>
+                           </a>
+                       </div><!-- end download__btn -->
+                   </div><!-- end side-bar -->
+               </div><!-- end col-md-4 -->
+           </div><!-- end row -->
+       </div><!-- container -->
+   </div><!-- end service-fluid -->
+</section>
 {% endblock content %}

@@ -1,412 +1,271 @@
 
 <!DOCTYPE html>
 {% load static %}
-<html lang="en-US" class="no-js">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Day Trading Tanzania | Trade what you see</title>
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/fa5/fa5.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/elegant/elegant-font.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/ionicons/ionicons.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/simpleline/simpleline.css' %}" type="text/css" media="all" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/plugins/style.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/goodlayers-core/include/css/page-builder.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/revslider/public/assets/css/rs6.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'css/style-core.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'css/dtt-style.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'js/plugins/revslider/public/assets/fonts/font-awesome/css/font-awesome.css' %}" type="text/css" media="all" />
-        <link rel="stylesheet" href="{% static 'css/overide.css' %}">
-        {% comment %} favicon {% endcomment %}
-        <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avivon - Business Consulting & Finance HTML5 Template">
+    <meta name="keywords" content="	advisor, business, consultant, consulting, corporate,  finance, financial, law firm, institutions, organizations , html5">
+    <title>DTT - Trade what you see</title>
 
-    </head>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.svg' %}">
 
-    <body class="home page-template-default page page-id-12613 theme-dtt gdlr-core-body woocommerce-no-js dtt-body dtt-body-front dtt-full dtt-with-sticky-navigation dtt-blockquote-style-3 gdlr-core-link-to-lightbox"
-        data-home-url="{% url 'page:home' %}" >
 
-        <div class="dtt-mobile-header-wrap">
-            <div class="dtt-mobile-header dtt-header-background dtt-style-slide dtt-sticky-mobile-navigation" id="dtt-mobile-header">
-                <div class="dtt-mobile-header-container dtt-container clearfix">
-                    <div class="dtt-logo dtt-item-pdlr">
-                        <div class="dtt-logo-inner">
-                            <a class="dtt-fixed-nav-logo" href="{% url 'page:home' %}">
-                                <img src="{% static 'images/logo.svg' %}"alt="Day Trading Tanzania" />
-                            </a>
-                            <a class="dtt-orig-logo" href="{% url 'page:home' %}">
-                                <img src="{% static 'images/logo.svg' %}"alt="Day Trading Tanzania"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="dtt-mobile-menu-right">
 
-                        <div class="dtt-mobile-menu">
-                            <a class="dtt-mm-menu-button dtt-mobile-menu-button dtt-mobile-button-hamburger" href="#dtt-mobile-menu"><span></span></a>
-                            <div class="dtt-mm-menu-wrap dtt-navigation-font" id="dtt-mobile-menu" data-slide="right">
-                                <ul id="menu-main-navigation" class="m-menu">
-                                    <li class="menu-item"><a href="{% url 'page:home' %}">HOME</a</li>
-                                    <li class="menu-item"><a href="{% url 'page:about' %}">ABOUT US</a</li>
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="#">SERVICES</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="{% url 'page:academy' %}">DTT Academy</a></li>
-                                            <li class="menu-item"><a href="{% url 'page:portfolio' %}">Portfolio Management</a></li>
-                                        </ul>
+    <!-- revolution slider css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontello.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnificpopup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- endinject -->
+
+</head>
+<body>
+<!-- page preloader -->
+<div id="loading-area">
+    <div class="three col">
+        <div class="loader" id="loader-1"></div>
+    </div>
+</div><!-- end loading -->
+
+<div class="body-overlay"></div><!-- end body-overlay -->
+<div class="offcanvas-menu">
+    <div class="menu__close"></div><!-- end menu__close -->
+    <ul class="off__menu">
+        <li class="menu__title-only">home <i class="fas fa-angle-down"></i></li>
+        <li><a href="index.html">home 01</a></li>
+        <li><a href="index2.html">home 02</a></li>
+        <li><a href="index3.html">home 03</a></li>
+        <li class="menu__title-only">services <i class="fas fa-angle-down"></i></li>
+        <li><a href="service1.html">services 01</a></li>
+        <li><a href="service2.html">services 02</a></li>
+        <li><a href="single-service.html">single service</a></li>
+        <li class="menu__title-only">pages <i class="fas fa-angle-down"></i></li>
+        <li><a href="about-us1.html">about us 01</a></li>
+        <li><a href="about-us2.html">about us 02</a></li>
+        <li><a href="our-mission.html">our mission</a></li>
+        <li><a href="our-history.html">our history</a></li>
+        <li><a href="our-partnership.html">partnership</a></li>
+        <li><a href="error-page-404.html">error 404 page</a></li>
+        <li class="menu__title-only">cases <i class="fas fa-angle-down"></i></li>
+        <li><a href="cases1.html">cases 01</a></li>
+        <li><a href="cases2.html">cases 02</a></li>
+        <li><a href="single-cases.html">single case</a></li>
+        <li class="menu__title-only">blog <i class="fas fa-angle-down"></i></li>
+        <li><a href="blog-post.html">blog post</a></li>
+        <li><a href="single-blog.html">single blog</a></li>
+        <li class="menu__title-only">contact <i class="fas fa-angle-down"></i></li>
+        <li><a href="contact.html">contact us</a></li>
+    </ul>
+</div><!-- end offcanvas-menu -->
+<!-- ================================
+        START MENU AREA
+================================= -->
+<section class="menu-area">
+    <div class="top-menu-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="menu-full-width">
+                        <div class="logo-box">
+                            <div class="site-open">
+                                <span class="open__only"></span>
+                                <span class="open__only"></span>
+                                <span class="open__only"></span>
+                            </div><!-- end site-open -->
+                            <div class="logo">
+                                <a href="{% url 'page:home' %}" title="Avivon"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+                            </div><!-- end logo -->
+                        </div><!-- end logo-box -->
+                        <div class="main-menu">
+                            <nav class="menu__wrapper">
+                                <ul class="dropdown-main">
+                                    <li><a href="{% url 'page:home' %}">Home</a></li>
+                                    <li><a href="{% url 'page:about' %}">About us</a></li>
+                                    <li>
+                                        <a href="#">What we do</a>
+                                        <div class="main__dropdown-menu">
+                                            <ul>
+                                                <li><a href="{% url 'page:academy' %}">DTT Academy</a></li>
+                                                <li><a href="{% url 'page:portfolio' %}">Portfolio Management</a></li>
+                                            </ul>
+                                        </div><!-- end main__dropdown-menu -->
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'page:contact' %}">Reach out</a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dtt-body-outer-wrapper">
-            <div class="dtt-body-wrapper clearfix dtt-with-transparent-header dtt-with-frame">
-                <div class="dtt-header-background-transparent">
-                    <header class="dtt-header-wrap dtt-header-style-plain dtt-style-menu-right dtt-sticky-navigation dtt-style-slide" data-navigation-offset="75">
-                        <div class="dtt-header-background"></div>
-                        <div class="dtt-header-container dtt-container">
-                            <div class="dtt-header-container-inner clearfix">
-                                <div class="dtt-logo dtt-item-pdlr">
-                                    <div class="dtt-logo-inner">
-                                        <a class="dtt-fixed-nav-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" title="ddt logo"/>
-                                        </a>
-                                        <a class="dtt-orig-logo" href="{% url 'page:home' %}">
-                                            <img src="{% static 'images/logo.svg' %}"alt="" title="ddt logo"/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dtt-navigation dtt-item-pdlr clearfix">
-                                    <div class="dtt-main-menu" id="dtt-main-menu">
-                                    <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item  dtt-normal-menu">
-                                        <a href="{% url 'page:home' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">start</span>HOME</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children dtt-normal-menu">
-                                        <a href="{% url 'page:about' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">Why & How</span>WHAT WE DO</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="{% url 'page:academy' %}">DTT Academy</a></li>
-                                            <li class="menu-item"><a href="{% url 'page:portfolio' %}">Portfolio management</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    
-                                    <li class="menu-item dtt-normal-menu">
-                                        <a href="{% url 'page:contact' %}" class="sf-with-ul-pre"><span class="dtt-menu-item-description">what next</span>REACH OUT</a>
-                                    </li>
+                            </nav><!-- end menu__wrapper -->
+                            <div class="logo-right-button">
+                                <div class="lang-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'login' %}">
+                                                Client Portal
+                                            </a>
+                                        </li>
                                     </ul>
-                                        <div class="dtt-navigation-slide-bar dtt-navigation-slide-bar-style-dot" data-size-offset="0" id="dtt-navigation-slide-bar"></div>
-                                    </div>
-                                    <div class="dtt-main-menu-right-wrap clearfix">
-                                        <a class="dtt-main-menu-right-button dtt-button-1 dtt-style-round" href="{% url 'login' %}" target="_self">Client Portal</a>
-                                    </div>
-                                </div>
-                                <!-- dtt-navigation -->
-                            </div>
-                            <!-- dtt-header-inner -->
-                        </div>
-                        <!-- dtt-header-container -->
-                    </header>
-                    <!-- header -->
-                </div>
-                {% block content %}
-                
-                {% endblock content %}
-                <footer>
-                    <div class="dtt-footer-wrapper">
-                        <div class="dtt-footer-container dtt-container clearfix">
-                            <div class="dtt-footer-column dtt-item-pdlr dtt-column-24">
-                                <div id="text-7" class="widget widget_text dtt-widget">
-                                    <div class="textwidget">
-                                        <p>
-                                            <img
-                                                loading="lazy"
-                                                src="{% static 'images/logo.svg' %}"alt=""title="logox1"/>
-                                        </p>
-                                        <p>Day trading Tanzania limited is a registered financial institution operating as a proprietary trading firm.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dtt-footer-column dtt-item-pdlrdtt-column-15">
-                                &nbsp; <br>
-                            </div>
-                            <div class="dtt-footer-column dtt-item-pdlr dtt-column-24">
-                                <div id="text-3" class="widget widget_text dtt-widget">
-                                    <h1 class="dtt-widget-title dtt-with-divider">Head Office</h1>
-                                    <span class="clear"></span>
-                                    <div class="textwidget">
-                                        <p>
-                                            <span style="font-size: 18px; color: #999999; font-weight: 400;">Email</span><br />
-                                            <span style="font-size: 18px; color: #ffffff; font-weight: 600;">
-                                                <a href="#" class="__cf_email__">info@dtt.co.tz</a>
-                                            </span>
-                                            <br />
-                                            <span class="gdlr-core-space-shortcode" style="margin-top: -10px;"></span><br />
-                                            <span style="font-size: 18px; color: #999999; font-weight: 400;">Phone</span><br />
-                                            <span style="font-size: 18px; color: #ffffff; font-weight: 600;">+255 748 100 253</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dtt-copyright-wrapper">
-                        <div class="dtt-copyright-container dtt-container">
-                            <div class="dtt-copyright-text dtt-item-pdlr">
-                                <div class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align" style="padding-bottom: 0px;">
-                                    <a
-                                        href="#"
-                                        target="_blank"
-                                        class="gdlr-core-social-network-icon"
-                                        title="facebook"
-                                        style="font-size: 17px; color: #060606; width: 40px; line-height: 40px; background-color: #ffffff; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"
-                                    >
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                    <a
-                                        href="#"
-                                        target="_blank"
-                                        class="gdlr-core-social-network-icon"
-                                        title="linkedin"
-                                        style="font-size: 17px; color: #060606; margin-left: 10px; width: 40px; line-height: 40px; background-color: #ffffff; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"
-                                    >
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                    <a
-                                        href="#"
-                                        target="_blank"
-                                        class="gdlr-core-social-network-icon"
-                                        title="twitter"
-                                        style="font-size: 17px; color: #060606; margin-left: 10px; width: 40px; line-height: 40px; background-color: #ffffff; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"
-                                    >
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                    <a
-                                        href="#"
-                                        target="_blank"
-                                        class="gdlr-core-social-network-icon"
-                                        title="instagram"
-                                        style="font-size: 17px; color: #060606; margin-left: 10px; width: 40px; line-height: 40px; background-color: #ffffff; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"
-                                    >
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </div>
-                                <span class="gdlr-core-space-shortcode" style="margin-top: 20px;"></span> &copy; Day Trading Tanzania.
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
+                                </div><!-- end lang-dropdown -->
+                                <div class="contact-para">
+                                    <p>info@dtt.co.tz</p>
+                                    <span class="fontello icon-phone-call phone-call"></span>
+                                </div><!-- end contact-para -->
+                            </div><!-- end logo-right-button -->
+                        </div><!-- end main-menu -->
+                    </div><!-- end menu-full-width -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end top-menu-area -->
+</section><!-- end menu-area -->
+<!-- ================================
+            END MENU AREA
+================================= -->
+{% block content %}
+  
+{% endblock content %}
+<!--================================
+       START FOOTER AREA
+=================================-->
+<section class="footer-area responsive-content theme-bg-dark">
+    <div class="footer-fluid">
+        <div class="container">
+            <div class="row footer-list">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-shared rpd-content">
+                        <div class="footer__title">
+                            <h3 class="footer__title-title">our address</h3>
+                        </div><!-- end footer__title -->
+                        <div class="ftp__links">
+                            <ul>
+                                <li>
+                                    <a href="tel:+255748100253"><i class="fas fa-phone-square"></i> +255 748 100 253</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@dtt.co.tz"><i class="fas fa-envelope"></i>
+                                        info@dtt.co.tz</a>
+                                </li>
+                                <li>
+                                    <p class="add__para-desc"><i class="fas fa-map"></i>C&G Plaza, Warioba, Mwai Kibaki Rd, Dar es Salaam</p>
+                                </li>
+                            </ul>
+                        </div><!-- end ftp__links -->
+                    </div><!-- end footer-shared -->
+                </div><!-- end col-md-3 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="footer-shared">
+                        <div class="footer__title">
+                            <h3 class="footer__title-title">extra links</h3>
+                        </div><!-- end footer__title -->
+                        <div class="ftp__links menu__links clearfix">
+                            <ul class="ftp__menu-links pull-left">
+                                <li><a href="about-us1.html">about</a></li>
+                                <li><a href="#">careers</a></li>
+                                <li><a href="#">our team</a></li>
+                                <li><a href="#">approach</a></li>
+                                <li><a href="cases1.html">case studies</a></li>
+                            </ul>
+                            <ul class="ftp__menu-links ftp__menu--links pull-left">
+                                <li><a href="service1.html">services</a></li>
+                                <li><a href="#">locations</a></li>
+                                <li><a href="#">clients</a></li>
+                                <li><a href="#">help</a></li>
+                                <li><a href="contact.html">contact</a></li>
+                            </ul>
+                        </div><!-- end ftp__links -->
+                    </div><!-- end footer-shared -->
+                </div><!-- end col-md-4 -->
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="footer-shared">
+                        <div class="footer__title">
+                            <h3 class="footer__title-title">sign up for email alerts</h3>
+                        </div><!-- end footer__title -->
+                        <div class="ftp__links">
+                            <div class="ftp__form-subs">
+                                <p class="ftp__links-desc__desc">subscribe for latest articles and resources</p>
+                                <form action="#">
+                                    <input type="email" placeholder="enter email">
+                                    <button class="email__subscriber-btn"><i class="fas fa-envelope"></i></button>
+                                </form>
+                            </div><!-- end ftp__form-subs -->
+                        </div><!-- end ftp__links -->
+                    </div><!-- end footer-shared -->
+                </div><!-- end col-md-5 -->
+            </div><!-- end row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-shared">
+                        <div class="col-md-8 no-padding-lr">
+                            <p class="copy__desc">&copy;copyright {% now "Y" %} Developed by <a href="mailto:layerdrops@gmail.com">Neotelabs</a></p>
+                        </div><!-- end col-md-8 -->
+                        <div class="col-md-4 text-right no-padding-lr">
+                            <ul class="copy__links">
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div><!-- end col-md-4 -->
+                    </div><!-- end copyright-shared -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end footer-fluid -->
+</section><!-- end footer-area -->
+<!--================================
+       END FOOTER AREA
+=================================-->
+
+<!-- start scroll top --->
+<div id="scroll-top">
+    <i class="fas fa-arrow-up" title="Go top"></i>
+</div>
+<!-- end scroll top -->
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/magnificpopup.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
-        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="{% static 'js/jquery-migrate.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/revslider/public/assets/js/rbtools.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/revslider/public/assets/js/rs6.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/goodlayers-core/plugins/script.js' %}"></script>
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var gdlr_core_pbf = { admin: "", video: { width: "640", height: "360" }, ajax_url: "#" };
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="{% static 'js/plugins/goodlayers-core/include/js/page-builder.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/ui/effect.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/jquery.mmenu.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/jquery.superfish.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins/script-core.js' %}"></script>
+<!-- Slider Revolution core JavaScript files -->
+<script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'js/rev-slider-script-2.js' %}"></script>
+<script>
 
+    // counter up
+    $('.counter').counterUp({
+        delay: 50,
+        time: 5000
+    });
 
-
-		<!-- Rev Slider Plugins Starts Here: -->
-
-        <script type="text/javascript">
-            function setREVStartSize(e) {
-                //window.requestAnimationFrame(function() {
-                window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
-                window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
-                try {
-                    var pw = document.getElementById(e.c).parentNode.offsetWidth,
-                        newh;
-                    pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
-                    e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
-                    e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
-                    e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
-                    e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
-                    e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
-                    e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
-                    e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
-                    if (e.layout === "fullscreen" || e.l === "fullscreen") newh = Math.max(e.mh, window.RSIH);
-                    else {
-                        e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-                        for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
-                        e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
-                        e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-                        for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
-
-                        var nl = new Array(e.rl.length),
-                            ix = 0,
-                            sl;
-                        e.tabw = e.tabhide >= pw ? 0 : e.tabw;
-                        e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
-                        e.tabh = e.tabhide >= pw ? 0 : e.tabh;
-                        e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
-                        for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
-                        sl = nl[0];
-                        for (var i in nl)
-                            if (sl > nl[i] && nl[i] > 0) {
-                                sl = nl[i];
-                                ix = i;
-                            }
-                        var m = pw > e.gw[ix] + e.tabw + e.thumbw ? 1 : (pw - (e.tabw + e.thumbw)) / e.gw[ix];
-                        newh = e.gh[ix] * m + (e.tabh + e.thumbh);
-                    }
-                    if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
-                    document.getElementById(e.c).height = newh + "px";
-                    window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
-                } catch (e) {
-                    console.log("Failure at Presize of Slider:" + e);
-                }
-                //});
-            }
-        </script>
-        <script type="text/javascript">
-            setREVStartSize({
-                c: "rev_slider_1_1",
-                rl: [1240, 1240, 778, 480],
-                el: [935, 935, 600, 500],
-                gw: [1320, 1320, 778, 480],
-                gh: [935, 935, 600, 500],
-                type: "standard",
-                justify: "",
-                layout: "fullwidth",
-                mh: "0",
-            });
-            var revapi1, tpj;
-            function revinit_revslider11() {
-                jQuery(function () {
-                    tpj = jQuery;
-                    revapi1 = tpj("#rev_slider_1_1");
-                    if (revapi1 == undefined || revapi1.revolution == undefined) {
-                        revslider_showDoubleJqueryError("rev_slider_1_1");
-                    } else {
-                        revapi1.revolution({
-                            sliderLayout: "fullwidth",
-                            visibilityLevels: "1240,1240,778,480",
-                            gridwidth: "1320,1320,778,480",
-                            gridheight: "935,935,600,500",
-                            perspective: 600,
-                            perspectiveType: "local",
-                            editorheight: "935,768,600,500",
-                            responsiveLevels: "1240,1240,778,480",
-                            progressBar: { disableProgressBar: true },
-                            navigation: {
-                                wheelCallDelay: 1000,
-                                onHoverStop: false,
-                                touch: {
-                                    touchenabled: true,
-                                },
-                                bullets: {
-                                    enable: true,
-                                    tmp: '<span class="tp-bullet-inner"></span>',
-                                    style: "uranus",
-                                    hide_over: "1280px",
-                                    v_offset: 36,
-                                    space: 7,
-                                },
-                                tabs: {
-                                    enable: true,
-                                    tmp: '<div class="tp-tab-content">  <span class="tp-tab-title">{{param2}}</span></div>',
-                                    style: "dtt-rev",
-                                    hide_onmobile: true,
-                                    hide_under: "1280px",
-                                    h_offset: 1,
-                                    v_offset: 46,
-                                    space: 40,
-                                    width: 280,
-                                    height: 80,
-                                    wrapper_padding: 5,
-                                    wrapper_color: "transparent",
-                                    mhoff: 0,
-                                },
-                            },
-                            fallbacks: {
-                                allowHTML5AutoPlayOnAndroid: true,
-                            },
-                        });
-                    }
-                });
-            } // End of RevInitScript
-            var once_revslider11 = false;
-            if (document.readyState === "loading") {
-                document.addEventListener("readystatechange", function () {
-                    if ((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11) {
-                        once_revslider11 = true;
-                        revinit_revslider11();
-                    }
-                });
-            } else {
-                once_revslider11 = true;
-                revinit_revslider11();
-            }
-        </script>
-        <script>
-            var htmlDivCss = unescape(".jost-font%7B%20font-family%3A%20%27jost%27%20%21important%3B%20%7D");
-            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-            if (htmlDiv) {
-                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-            } else {
-                var htmlDiv = document.createElement("div");
-                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-            }
-        </script>
-        <script>
-            var htmlDivCss = unescape(
-                "%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C255%2C255%2C0%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C255%2C255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgba%28255%2C255%2C255%2C0%29%3B%0A%20%20background-color%3A%20rgba%28255%2C255%2C255%2C0.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1_wrapper%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argba%28255%2C255%2C255%2C1%29%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab%7B%20%0A%20%20opacity%3A1%3B%20%20%20%20%20%20%0A%20%20padding%3A10px%3B%0A%20%20box-sizing%3Aborder-box%3B%0A%20%20font-family%3A%20%27Jost%27%2C%20sans-serif%3B%0A%20%20border-top%3A%203px%20solid%20%23e5e5e5%3B%0A%20%20background%3A%20none%3B%0A%20%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab-content%7B%0A%20%20%20%20background%3A%20none%3B%0A%20%20%20%20position%3Arelative%3B%0A%20%20%20%20padding%3A26px%2015px%2015px%200px%3B%0A%20left%3A0px%3B%0A%20overflow%3Ahidden%3B%0A%20margin-top%3A-15px%3B%0A%20%20%20%20box-sizing%3Aborder-box%3B%0A%20%20%20%20color%3A%23333%3B%0A%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20width%3A100%25%3B%0A%20%20%20%20height%3A100%25%3B%0A%20position%3Aabsolute%3B%20%0A%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab-date%7B%0A%20%20display%3Ablock%3B%0A%20%20color%3A%20%23aaaaaa%3B%0A%20%20font-weight%3A500%3B%0A%20%20font-size%3A12px%3B%0A%20%20margin-bottom%3A0px%3B%0A%20%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab-title%7B%0A%20%20%20%20display%3Ablock%3B%09%0A%20%20%20%20text-align%3A%20left%3B%0A%20%20%20%20color%3A%23ffffff%3B%0A%20%20%20%20font-size%3A20px%3B%0A%20%20%20%20font-weight%3A400%3B%0A%20%20%20%20text-transform%3Anone%3B%0A%20%20%20%20line-height%3A17px%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab%3Ahover%2C%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab.selected%20%7B%0A%09background%3A%20none%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab.selected%20.tp-tab-title%20%0A%7B%0A%20%20%20%20color%20%3A%20%23d32525%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.dtt-rev%20.tp-tab.selected%20%7B%20%0A%20%20border-top%3A%203px%20solid%20%23d32525%3B%0A%20%7D%0A%0A%2F%2A%20media%20queries%20%2A%2F%0A%40media%20only%20screen%20and%20%28max-width%3A%20960px%29%20%7B%0A%0A%7D%0A%40media%20only%20screen%20and%20%28max-width%3A%20768px%29%20%7B%0A%20%0A%7D%0A"
-            );
-            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-            if (htmlDiv) {
-                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-            } else {
-                var htmlDiv = document.createElement("div");
-                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-            }
-        </script>
-        <script>
-            var htmlDivCss = unescape("%0A%0A%0A%0A%0A%0A%0A%0A");
-            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-            if (htmlDiv) {
-                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-            } else {
-                var htmlDiv = document.createElement("div");
-                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-            }
-        </script>
-        <script type="text/javascript">
-            if (typeof revslider_showDoubleJqueryError === "undefined") {
-                function revslider_showDoubleJqueryError(sliderID) {
-                    var err = "<div class='rs_error_message_box'>";
-                    err += "<div class='rs_error_message_oops'>Oops...</div>";
-                    err += "<div class='rs_error_message_content'>";
-                    err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
-                    err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
-                    err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
-                    err += "</div>";
-                    err += "</div>";
-                    var slider = document.getElementById(sliderID);
-                    slider.innerHTML = err;
-                    slider.style.display = "block";
-                }
-            }
-        </script>
-
-    </body>
+</script>
+</body>
 </html>

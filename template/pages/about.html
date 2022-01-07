@@ -2,54 +2,185 @@
 {% load static %}
 
 {% block content %}
-<div class="dtt-page-title-wrap dtt-style-custom dtt-left-align">
-    <div class="dtt-header-transparent-substitute"></div>
-    <div class="dtt-page-title-overlay"></div>
-    <div class="dtt-page-title-container dtt-container">
-        <div class="dtt-page-title-content dtt-item-pdlr">
-            <h1 class="dtt-page-title">Who We Are</h1>
-            <div class="dtt-page-caption-divider"></div>
-            <p>We work together to make great things happen</p>
-        </div>
-    </div>
-</div>
-<section class="the-people">
-    <div class="row">
-        <div class="col-md-6 pl-1">
-            <div class="dtt-page-title dtt-item-pdlr">
-                <h6>Who are we</h6>
-                <h1 class="dtt-title">Our <span>People</span></h1>
-                <div class="dtt-page-caption-divider"></div>
-                <p class="dtt-text">We have a drive for innovation, and everyone who works here is connected by a transparent and collaborative environment. 
-We welcome new ideas, accept differing opinions and embrace new ways of seeing the world. If you think you can bring a fresh perspective, get in touch today.
-</p>
-                <a href="{% url 'page:people' %}">View Our Team</a>
-            </div>
-        </div>
-        <div class="col-md-6"><img src="{% static 'images/people.jpg' %}" alt="into-image"></div>
-    </div>
+<section class="trusted-area breadcrumb-area text-center">
+    <div class="trusted-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="trusted-content">
+                        <div class="trusted__title">
+                            <ul class="bread__rumb-item">
+                                <li class="active-item"><a href="{% url 'page:home' %}">home</a></li>
+                                <li>about</li>
+                            </ul>
+                            <h2 class="trusted__title-title">About Us</h2>
+                        </div><!-- end trusted__title -->
+                    </div><!-- end trusted-content -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end trusted-fluid -->
 </section>
 
-<section class="the-tech">
-    <div class="row">
-        <div class="col-md-6"><img src="{% static 'images/tools.jpg' %}" alt="into-image"></div>
-        <div class="col-md-4 ml-30">
-            <div class="dtt-page-title">
-                <h6>How we do it</h6>
-                <h1 class="dtt-title">Tools and <span>Technology</span></h1>
-                <div class="dtt-page-caption-divider"></div>
-                <p class="dtt-text">Our proprietary systems incorporate best-of-breed 
-open source solutions which enable faster innovation 
-and deliver greater value to our business.
+<section class="offer-area offer--area responsive-content skill-area theme-bg-gray">
+    <div class="offer-fluid">
+        <div class="container-fluid">
+            <div class="row offer-content">
+                <div class="offer-list-box skill-list-box">
+                    <div class="offer-list">
+                        <div class="avivon-heading skill-title mb-50px">
+                            <h2 class="avivon__title">
+                                Our People</h2>
+                            <p class="avivon__desc mt-25px">
+                                We have a drive for innovation, and everyone who works here is connected by a transparent and collaborative environment. We welcome new ideas, accept differing opinions and embrace new ways of seeing the world. If you think you can bring a fresh perspective, get in touch today.</p>
+                        </div><!-- end avivon-heading -->
 
-We differentiate our investment process via our three 
-core pillars of expertise in macro 
-thinking trade structuring & Risk management
-</p>
-                <a href="{% url 'page:people' %}">View Our Team</a>
+                        <div class="avivon-heading skill-title mb-50px">
+                            <h2 class="avivon__title">
+                                Tools and Technology</h2>
+                            <p class="avivon__desc mt-25px">
+                                Our proprietary systems incorporate best-of-breed open source solutions which enable faster innovation and deliver greater value to our business. We differentiate our investment process via our three core pillars of expertise in macro thinking trade structuring & Risk management.</p>
+                        </div><!-- end avivon-heading -->
+                        
+                    </div><!-- end offer-list -->
+                </div><!-- end offer-list-box -->
+                <div class="skill-bg-area">
+                    <div class="offer-quote"></div><!-- end offer-quote -->
+                </div><!-- end skill-bg-area -->
+            </div><!-- end row -->
+        </div><!-- container-fluid -->
+    </div><!-- end offer-fluid -->
+</section>
+
+<section class="team-area responsive-content area-padding text-center">
+    <div class="team-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 primary-padding-3">
+                    <div class="avivon-heading">
+                        <h2 class="avivon__title five__title">Our pride</h2>
+                    </div><!-- end avivon-heading -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+            <div class="row team-content">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/ken.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Keneth Lehada</h3>
+                            <span class="team__title-span">Founder & CEO</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/leobatius.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Leobatius karumuna</h3>
+                            <span class="team__title-span">Head Of Trade</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/mathew.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Mathew Lehada</h3>
+                            <span class="team__title-span">Portfolio Manager</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same rpl-content">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/ahmed.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Ahmed Amour</h3>
+                            <span class="team__title-span">Chief Accountant</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
+            </div><!-- end row -->
+            <div class="row team-content mt-25px">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same rpl-content">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/vivian.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Vivian kafu</h3>
+                            <span class="team__title-span">Sr. Marketing Manager</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-same rpl-content">
+                        <div class="team__img mb-30px">
+                            <img src="{% static 'images/team/zepha.jpg' %}" alt="team image">
+                            <div class="team__img-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div><!-- end team__img-links -->
+                        </div><!-- end team__img-->
+                        <div class="team__title">
+                            <h3 class="team__title-title">Zephania Mjema</h3>
+                            <span class="team__title-span">jr. Portfolio Manager</span>
+                        </div><!-- end choose__title -->
+                    </div><!-- end team-same -->
+                </div><!-- end col-md-3 -->
             </div>
-        </div>
-    </div>
+        </div><!-- container -->
+    </div><!-- end team-fluid -->
 </section>
 
 {% endblock content %}
