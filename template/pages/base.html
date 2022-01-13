@@ -45,30 +45,14 @@
 <div class="offcanvas-menu">
     <div class="menu__close"></div><!-- end menu__close -->
     <ul class="off__menu">
-        <li class="menu__title-only">home <i class="fas fa-angle-down"></i></li>
-        <li><a href="index.html">home 01</a></li>
-        <li><a href="index2.html">home 02</a></li>
-        <li><a href="index3.html">home 03</a></li>
-        <li class="menu__title-only">services <i class="fas fa-angle-down"></i></li>
-        <li><a href="service1.html">services 01</a></li>
-        <li><a href="service2.html">services 02</a></li>
-        <li><a href="single-service.html">single service</a></li>
-        <li class="menu__title-only">pages <i class="fas fa-angle-down"></i></li>
-        <li><a href="about-us1.html">about us 01</a></li>
-        <li><a href="about-us2.html">about us 02</a></li>
-        <li><a href="our-mission.html">our mission</a></li>
-        <li><a href="our-history.html">our history</a></li>
-        <li><a href="our-partnership.html">partnership</a></li>
-        <li><a href="error-page-404.html">error 404 page</a></li>
-        <li class="menu__title-only">cases <i class="fas fa-angle-down"></i></li>
-        <li><a href="cases1.html">cases 01</a></li>
-        <li><a href="cases2.html">cases 02</a></li>
-        <li><a href="single-cases.html">single case</a></li>
-        <li class="menu__title-only">blog <i class="fas fa-angle-down"></i></li>
-        <li><a href="blog-post.html">blog post</a></li>
-        <li><a href="single-blog.html">single blog</a></li>
-        <li class="menu__title-only">contact <i class="fas fa-angle-down"></i></li>
-        <li><a href="contact.html">contact us</a></li>
+        <li><a href="{% url 'page:home' %}">Home</a></li>
+        <li><a href="{% url 'page:about' %}">About us</a></li>
+        <li class="menu__title-only">What we do <i class="fas fa-angle-down"></i></li>
+        <li><a href="{% url 'page:academy' %}">DTT Academy</a></li>
+        <li><a href="{% url 'page:portfolio' %}">Portfolio Management</a></li>
+        <li>
+            <a href="{% url 'page:contact' %}">Reach out</a>
+        </li>
     </ul>
 </div><!-- end offcanvas-menu -->
 <!-- ================================
@@ -176,14 +160,13 @@
                                 <li><a href="#">careers</a></li>
                                 <li><a href="#">our team</a></li>
                                 <li><a href="#">approach</a></li>
-                                <li><a href="cases1.html">case studies</a></li>
                             </ul>
                             <ul class="ftp__menu-links ftp__menu--links pull-left">
-                                <li><a href="service1.html">services</a></li>
+                                <li><a href="#">services</a></li>
                                 <li><a href="#">locations</a></li>
                                 <li><a href="#">clients</a></li>
                                 <li><a href="#">help</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="#">contact</a></li>
                             </ul>
                         </div><!-- end ftp__links -->
                     </div><!-- end footer-shared -->
@@ -209,7 +192,7 @@
                 <div class="col-md-12">
                     <div class="copyright-shared">
                         <div class="col-md-8 no-padding-lr">
-                            <p class="copy__desc">&copy;copyright {% now "Y" %} Developed by <a href="mailto:layerdrops@gmail.com">Neotelabs</a></p>
+                            <p class="copy__desc">&copy;copyright {% now "Y" %} Developed by <a href="mailto:info@neotelabs.com">Neotelabs</a></p>
                         </div><!-- end col-md-8 -->
                         <div class="col-md-4 text-right no-padding-lr">
                             <ul class="copy__links">
