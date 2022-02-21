@@ -1,6 +1,8 @@
 {% extends 'pages/base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
+
 <!--================================
          START REV SLIDER AREA
 =================================-->
@@ -114,10 +116,8 @@
                    <div class="offer-quote">
                        <blockquote class="opr-block">
                            <p class="quote__para">
-                            We have a key priority in making sure that students are corporate ready by instilling in them not just good academic understanding but also developing a well-rounded economical approach which will play a great role in connecting a student with the financial markets with the same corporate mindset that we possess. 
+                            We have a key priority in making sure that students are corporate ready by instilling in them not just good academic understanding but also developing a well-rounded economical approach which will play a great role in connecting a student with the financial markets with the same corporate mindset that we possess
                             .</p>
-                           <h3 class="quote__sign">Keneth Lehada</h3>
-                           <span class="quote__span">CEO</span>
                        </blockquote>
                    </div><!-- end offer-quote -->
                </div><!-- end col-md-4 -->
@@ -239,6 +239,55 @@
        </div><!-- container -->
    </div><!-- end choose-fluid -->
 </section>
+{% if blog %}
+<section class="blog-area responsive-content area-padding">
+    <div class="blog-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 primary-padding-2 text-center">
+                    <div class="avivon-heading">
+                        <h2 class="avivon__title">blog posts</h2>
+                    </div><!-- end avivon-heading -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+            <div class="row service-box blog-box text-left">
+            {% for blog in blog %}
+            
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="shared-service">
+                        <div class="shared__img">
+                            <img src="{{ blog.cover.url }}" alt="{{ blog.cover }}">
+                            <div class="shared__date-item">
+                                <span>{{ blog.published_date|naturalday }}</span>
+                            </div>
+                        </div><!-- end shared-__img -->
+                        <div class="shared-content">
+                            <div class="service__title mb-30px">
+                                <h3 class="service__title-title">
+                                    <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a>
+                                </h3>
+                            </div><!-- end service__title -->
+                            <div class="service__desc mb-35px">
+                                <p class="service__desc-desc">
+                                    {{ blog.brief }}
+                                </p>
+                            </div><!-- end service__desc -->
+                            <div class="service__more">
+                                <a href="{{ blog.get_absolute_url }}" class="service__more-btn">
+                                    read more <span class="fontello icon-angle-double-right"></span>
+                                </a>
+                            </div><!-- end service__desc -->
+                        </div><!-- end shared-content -->
+                    </div><!-- end shared-service -->
+                </div><!-- end col-md-4 -->
+            
+            {% endfor %}
+        </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end blog-fluid -->
+</section>
+{% endif %}
+
 <section class="meet-area area-padding theme-bg-main">
    <div class="meet-fluid">
        <div class="container">
@@ -249,7 +298,7 @@
                        <p class="avivon__desc">
                            We know the importance of delivering the best <br>
                             customer experience.</p>
-                       <a href="contact.html" class="meet__btn">get started
+                       <a href="{% url 'page:contact' %}" class="meet__btn">get started
                            <span class="fontello icon-angle-double-right"></span>
                        </a>
                    </div><!-- end meet-heading -->

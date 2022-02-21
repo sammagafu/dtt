@@ -39,9 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'crispy_forms',
+    'django_quill',
     'accounts',
     'dashboard',
     'page',
+    'blog',
+    'django_social_share',
+
 ]
 
 MIDDLEWARE = [

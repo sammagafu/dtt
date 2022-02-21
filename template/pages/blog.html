@@ -1,0 +1,65 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<section class="trusted-area breadcrumb-area text-center">
+    <div class="trusted-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="trusted-content">
+                        <div class="trusted__title">
+                            <ul class="bread__rumb-item">
+                                <li class="active-item"><a href="{% url 'page:home' %}">home</a></li>
+                                <li>Blog</li>
+                            </ul>
+                            <h2 class="trusted__title-title">Blog</h2>
+                        </div><!-- end trusted__title -->
+                    </div><!-- end trusted-content -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end trusted-fluid -->
+</section>
+
+<section class="blog-area responsive-content area-padding text-left">
+    <div class="blog-fluid">
+        <div class="container">
+            <div class="row service-box blog-box text-left">
+            {% for blog in blog %}
+            
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="shared-service">
+                        <div class="shared__img">
+                            <img src="{{ blog.cover.url }}" alt="{{ blog.cover }}">
+                            <div class="shared__date-item">
+                                <span>{{ blog.published_date|naturalday }}</span>
+                            </div>
+                        </div><!-- end shared-__img -->
+                        <div class="shared-content">
+                            <div class="service__title mb-30px">
+                                <h3 class="service__title-title">
+                                    <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a>
+                                </h3>
+                            </div><!-- end service__title -->
+                            <div class="service__desc mb-35px">
+                                <p class="service__desc-desc">
+                                    {{ blog.brief }}
+                                </p>
+                            </div><!-- end service__desc -->
+                            <div class="service__more">
+                                <a href="{{ blog.get_absolute_url }}" class="service__more-btn">
+                                    read more <span class="fontello icon-angle-double-right"></span>
+                                </a>
+                            </div><!-- end service__desc -->
+                        </div><!-- end shared-content -->
+                    </div><!-- end shared-service -->
+                </div><!-- end col-md-4 -->
+            {% endfor %}
+        </div>
+        </div><!-- container -->
+    </div><!-- end blog-fluid -->
+</section>
+
+{% endblock content %}

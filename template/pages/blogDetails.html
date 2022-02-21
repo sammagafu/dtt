@@ -1,0 +1,124 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load humanize %}
+{% load social_share %}
+
+{% block content %}
+<section class="trusted-area breadcrumb-area text-center">
+    <div class="trusted-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="trusted-content">
+                        <div class="trusted__title">
+                            <ul class="bread__rumb-item">
+                                <li class="active-item"><a href="{% url 'page:home' %}">home</a></li>
+                                <li>Blog</li>
+                            </ul>
+                            <h2 class="trusted__title-title">{{ blog.title }}</h2>
+                        </div><!-- end trusted__title -->
+                    </div><!-- end trusted-content -->
+                </div><!-- end col-md-12 -->
+            </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end trusted-fluid -->
+</section>
+
+<section class="single-area area-padding">
+    <div class="service-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="single-content">
+                        <div class="single__img">
+                            <img src="{{ blog.cover.url }}" alt="{{ blog.title }}" class="img-single">
+                            <div class="shared__date-item">
+                                <span>{{ blog.published_date|naturalday }}</span>
+                            </div><!-- end shared__date-item -->
+                        </div><!-- end single__img -->
+                        <div class="avivon-heading">
+                            <h2 class="avivon__title theme-afr">{{ blog.title }}</h2>
+                            <ul class="post__meta mb-30px">
+                                <li>by <a href="#">Day Trading Tanzania</a></li>
+                            </ul>
+                            <p class="avivon__desc mb-30px">
+                                {{ blog.brief }}
+                            </p>
+                            <p class="avivon__desc mb-50px pb-50px theme-btb">
+                                {{ blog.content.html|safe }}
+                            </p>
+                            <div class="tags__list mb-50px">
+                                <ul class="post__meta tag__meta meta__tag">
+                                    <li><span>Share:</span></li>
+                                </ul>
+                                {% comment %} <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                {% endcomment %}
+                                <ul class="post__meta link__meta links__links">
+                                    <li> {% post_to_facebook blog.get_absolute_url "facebook"%}</li>
+                                    <li>{% post_to_twitter "New Post: {{blog.title}}. Check it out!" blog.get_absolute_url "Post to Twitter" %}
+                                    </li>
+                                    <li>{% post_to_gplus blog.get_absolute_url "Post to Google+!" %}</li>
+                                    <li>{% post_to_linkedin blog.get_absolute_url %}</li>
+                                    <li> {% send_email blog.title "New Post: {{blog.title}}. Check it out!" blog.get_absolute_url "Share via email" %}
+                                    </li>
+                                    <li>{% post_to_reddit "New Post: {{blog.title}}" blog.get_absolute_url%}</li>
+                                    <li> {% post_to_telegram "New Post: {{blog.title}}" blog.get_absolute_url%}</li>
+                                    <li>{% post_to_whatsapp blog.get_absolute_url "Share via WhatsApp" %}</li>
+                                    <li>{% save_to_pinterest blog.get_absolute_url %}</li>
+                                    <li> {% add_pinterest_script %}</li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- end single-content -->
+                </div><!-- end col-md-8 -->
+                <div class="col-md-4">
+
+                    <div class="side-bar">
+                        {% comment %} <div class="side__shared details__widget post__shared mb-30px">
+                            <h3 class="side__bar-title">latest posts</h3>
+                            <div class="post-list theme-btb pb-20px mb-20px">
+                                <div class="post__img post__one"></div><!-- end post__img -->
+                                <div class="post__body">
+                                    <p class="post__body-title">
+                                        <a href="single-blog.html">what you do today can improve all your</a>
+                                    </p>
+                                </div><!-- end post__img-item -->
+                            </div><!-- end post-list -->
+                            <div class="post-list theme-btb pb-20px mb-20px">
+                                <div class="post__img post__two"></div><!-- end post__img -->
+                                <div class="post__body">
+                                    <p class="post__body-title">
+                                        <a href="single-blog.html">money markets rates findings the best</a>
+                                    </p>
+                                </div><!-- end post__img-item -->
+                            </div><!-- end post-list -->
+                            <div class="post-list mb-10px">
+                                <div class="post__img post__three"></div><!-- end post__img -->
+                                <div class="post__body">
+                                    <p class="post__body-title">
+                                        <a href="single-blog.html">many important brands have given us their</a>
+                                    </p>
+                                </div><!-- end post__img-item -->
+                            </div><!-- end post-list -->
+                        </div><!-- end side__shared --> {% endcomment %}
+                        <div class="side__shared post__shared mb-30px">
+                            <h3 class="side__bar-title">categories</h3>
+                            <ul class="side__bar-links">
+                                {% for cat in category %}
+                                <li>
+                                    <a href="#">{{ cat.name }}</a>
+                                    <span class="fontello icon-angle-double-right"></span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div><!-- end side__shared -->
+                    </div><!-- end side-bar -->
+                </div><!-- end col-md-4 -->
+            </div><!-- end row -->
+        </div><!-- container -->
+    </div><!-- end service-fluid -->
+</section>
+
+
+{% endblock content %}
