@@ -3093,6 +3093,7 @@ body {
 .breadcrumb-area {
   padding: 280px 0 140px 0;
   background-image: url("../images/breadcrumb-img.jpg"); }
+
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     .breadcrumb-area {
       padding: 240px 0 140px 0; } }
